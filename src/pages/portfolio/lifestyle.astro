@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GalleryPage from '../../components/GalleryPage.astro';
+
+const images = [
+  { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80', alt: 'Lifestyle session' },
+  { src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&q=80', alt: 'Lifestyle outdoors' },
+  { src: 'https://images.unsplash.com/photo-1524863479829-916d8e77f114?w=800&q=80', alt: 'Natural lifestyle' },
+  { src: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=80', alt: 'Lifestyle friends' },
+  { src: 'https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?w=800&q=80', alt: 'Everyday moment' },
+  { src: 'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=800&q=80', alt: 'Lifestyle portrait' },
+  { src: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80', alt: 'Casual lifestyle' },
+];
+---
+
+<Layout title="Lifestyle | Ashley Renee Photography">
+  <GalleryPage
+    title="Lifestyle"
+    subtitle="Everyday Beauty"
+    heroImage="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1600&q=80"
+    description="Some of the most beautiful moments are the quiet, ordinary ones. A lifestyle session celebrates who you are right now — no occasion needed."
+    images={images}
+  />
+</Layout>

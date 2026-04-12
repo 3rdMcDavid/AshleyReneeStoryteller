@@ -1,0 +1,60 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  heroImage: string;
+  description: string;
+  images: { src: string; alt: string }[];
+}
+
+const { title, subtitle, heroImage, description, images } = Astro.props;
+---
+
+<!-- Page Hero -->
+<section class="relative h-[50vh] min-h-[380px] flex items-end overflow-hidden mt-[73px]">
+  <div class="absolute inset-0">
+    <img src={heroImage} alt={title} class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 pb-14 text-white">
+    <a href="/portfolio" class="inline-flex items-center gap-2 font-['Jost'] text-[10px] tracking-[0.2em] uppercase text-white/60 hover:text-white mb-4 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Portfolio
+    </a>
+    <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-white/70 mb-2">{subtitle}</p>
+    <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light">{title}</h1>
+  </div>
+</section>
+
+<!-- Description -->
+<section class="py-16 px-6 bg-[#faf8f5] text-center">
+  <div class="max-w-2xl mx-auto">
+    <div class="w-12 h-px bg-[#c4a882] mx-auto mb-6"></div>
+    <p class="font-['Cormorant_Garamond'] text-xl italic text-[#4a4440] leading-relaxed">{description}</p>
+    <div class="w-12 h-px bg-[#c4a882] mx-auto mt-6"></div>
+  </div>
+</section>
+
+<!-- Masonry-style Gallery -->
+<section class="pb-20 px-6 bg-[#faf8f5]">
+  <div class="max-w-7xl mx-auto columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+    {images.map(img => (
+      <div class="break-inside-avoid overflow-hidden group cursor-pointer">
+        <img
+          src={img.src}
+          alt={img.alt}
+          class="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-6 bg-[#f5f1eb] text-center">
+  <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-3">Love What You See?</p>
+  <h2 class="font-['Cormorant_Garamond'] text-4xl font-light text-[#2d2926] mb-6">Let's Create Yours</h2>
+  <a href="/contact" class="inline-block bg-[#2d2926] text-white font-['Jost'] text-xs tracking-[0.2em] uppercase px-10 py-4 hover:bg-[#c4a882] transition-all duration-300">
+    Book a Session
+  </a>
+</section>

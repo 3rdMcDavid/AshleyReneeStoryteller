@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GalleryPage from '../../components/GalleryPage.astro';
+
+const images = [
+  { src: 'https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&q=80', alt: 'Engagement couple' },
+  { src: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80', alt: 'Couple laughing' },
+  { src: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=80', alt: 'Engagement ring' },
+  { src: 'https://images.unsplash.com/photo-1509305717900-84f40e786d82?w=800&q=80', alt: 'Couple outdoors' },
+  { src: 'https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=800&q=80', alt: 'Golden hour couple' },
+  { src: 'https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=800&q=80', alt: 'Engagement portrait' },
+  { src: 'https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=800&q=80', alt: 'Couple in nature' },
+  { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&q=80', alt: 'Romantic moment' },
+];
+---
+
+<Layout title="Engagements | Ashley Renee Photography">
+  <GalleryPage
+    title="Engagements"
+    subtitle="Love Stories"
+    heroImage="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=1600&q=80"
+    description="Your engagement session is a chance to be together — just the two of you — before the beautiful chaos of your wedding day. Let's make it feel like you."
+    images={images}
+  />
+</Layout>

@@ -1,0 +1,130 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+  {
+    title: 'A Rainy Day Wedding at Riverside Manor',
+    date: 'March 15, 2026',
+    category: 'Weddings',
+    excerpt: 'When the forecast called for rain on Emma and Tyler\'s wedding day, they didn\'t bat an eye. What happened instead was one of the most beautiful, romantic ceremonies I\'ve ever had the honor of capturing.',
+    image: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80',
+    slug: '#',
+  },
+  {
+    title: 'Golden Hour Engagement Session: Sofia & Marcus',
+    date: 'February 28, 2026',
+    category: 'Engagements',
+    excerpt: 'We chased the light through the wildflower fields and found something pretty magical. Sofia and Marcus were absolute naturals — here\'s a peek at their session.',
+    image: 'https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&q=80',
+    slug: '#',
+  },
+  {
+    title: '5 Tips for a Stress-Free Senior Portrait Session',
+    date: 'February 10, 2026',
+    category: 'Tips',
+    excerpt: 'Senior photos can feel daunting. But they don\'t have to be. Here are my five favorite tips for seniors who want to feel confident and natural in front of the camera.',
+    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
+    slug: '#',
+  },
+  {
+    title: 'The Thompson Family: An Autumn Afternoon',
+    date: 'January 22, 2026',
+    category: 'Family',
+    excerpt: 'Three kids under six? No problem. The Thompson family brought their chaos and their love, and we made something beautiful out of both.',
+    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80',
+    slug: '#',
+  },
+  {
+    title: 'What to Wear for Your Lifestyle Session',
+    date: 'January 5, 2026',
+    category: 'Tips',
+    excerpt: 'Outfit stress is real. This guide breaks down exactly what to wear — and what to avoid — so you can look amazing and feel completely yourself on shoot day.',
+    image: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80',
+    slug: '#',
+  },
+  {
+    title: 'Behind the Camera: My Favorite Locations',
+    date: 'December 18, 2025',
+    category: 'Behind the Scenes',
+    excerpt: 'After years of shooting in this area, I\'ve found some truly magical locations for portraits. Here are a few of my absolute favorites and what makes each one special.',
+    image: 'https://images.unsplash.com/photo-1524863479829-916d8e77f114?w=800&q=80',
+    slug: '#',
+  },
+];
+---
+
+<Layout title="Blog | Ashley Renee Photography" description="Stories, tips, and session highlights from Ashley Renee Photography.">
+
+  <!-- Page Hero -->
+  <section class="relative h-[45vh] min-h-[360px] flex items-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1524863479829-916d8e77f114?w=1600&q=80"
+        alt="Blog"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/45"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-14 text-white">
+      <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-white/70 mb-2">Stories & Tips</p>
+      <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light">The Journal</h1>
+    </div>
+  </section>
+
+  <!-- Posts Grid -->
+  <section class="py-20 px-6 bg-[#faf8f5]">
+    <div class="max-w-7xl mx-auto">
+      <!-- Featured Post -->
+      <a href={posts[0].slug} class="group grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 border border-[#e8e4de] bg-white overflow-hidden">
+        <div class="overflow-hidden aspect-[4/3]">
+          <img
+            src={posts[0].image}
+            alt={posts[0].title}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-10 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-['Jost'] text-[10px] tracking-[0.2em] uppercase text-[#c4a882]">{posts[0].category}</span>
+            <span class="text-[#e8e4de]">—</span>
+            <span class="font-['Jost'] text-[10px] text-[#7a7470]">{posts[0].date}</span>
+          </div>
+          <h2 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] mb-4 group-hover:text-[#c4a882] transition-colors">
+            {posts[0].title}
+          </h2>
+          <p class="font-['Jost'] text-sm text-[#7a7470] leading-relaxed mb-6">{posts[0].excerpt}</p>
+          <span class="font-['Jost'] text-[10px] tracking-[0.2em] uppercase border-b border-[#c4a882] pb-0.5 text-[#c4a882] self-start">
+            Read More
+          </span>
+        </div>
+      </a>
+
+      <!-- Remaining Posts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.slice(1).map(post => (
+          <a href={post.slug} class="group bg-white border border-[#e8e4de] overflow-hidden">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img
+                src={post.image}
+                alt={post.title}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="font-['Jost'] text-[10px] tracking-[0.2em] uppercase text-[#c4a882]">{post.category}</span>
+                <span class="text-[#e8e4de]">—</span>
+                <span class="font-['Jost'] text-[10px] text-[#7a7470]">{post.date}</span>
+              </div>
+              <h3 class="font-['Cormorant_Garamond'] text-xl font-light text-[#2d2926] mb-3 group-hover:text-[#c4a882] transition-colors leading-snug">
+                {post.title}
+              </h3>
+              <p class="font-['Jost'] text-xs text-[#7a7470] leading-relaxed line-clamp-3">{post.excerpt}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>

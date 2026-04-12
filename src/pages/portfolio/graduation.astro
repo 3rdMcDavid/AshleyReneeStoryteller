@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GalleryPage from '../../components/GalleryPage.astro';
+
+const images = [
+  { src: 'https://images.unsplash.com/photo-1627556704302-624286467c65?w=800&q=80', alt: 'Graduation portrait' },
+  { src: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80', alt: 'Graduate outdoors' },
+  { src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80', alt: 'Cap and gown' },
+  { src: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=800&q=80', alt: 'Graduation celebration' },
+  { src: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=800&q=80', alt: 'Graduate smiling' },
+  { src: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80', alt: 'Diploma moment' },
+  { src: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80', alt: 'Graduate in nature' },
+  { src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80', alt: 'Graduation portrait close-up' },
+];
+---
+
+<Layout title="Graduation | Ashley Renee Photography">
+  <GalleryPage
+    title="Graduation"
+    subtitle="Celebrate the Achievement"
+    heroImage="https://images.unsplash.com/photo-1627556704302-624286467c65?w=1600&q=80"
+    description="You worked hard for this. Let's make sure these photos reflect exactly how proud you should feel — cap, gown, and all the joy that comes with it."
+    images={images}
+  />
+</Layout>

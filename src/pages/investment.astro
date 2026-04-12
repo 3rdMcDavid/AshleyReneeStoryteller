@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const packages = [
+  {
+    category: 'Weddings',
+    packages: [
+      {
+        name: 'Essential',
+        price: '$2,400',
+        hours: '6 Hours',
+        features: [
+          '6 hours of coverage',
+          '1 photographer',
+          '400+ edited images',
+          'Online gallery (1 year)',
+          'Print release',
+        ],
+      },
+      {
+        name: 'Classic',
+        price: '$3,200',
+        hours: '8 Hours',
+        featured: true,
+        features: [
+          '8 hours of coverage',
+          '1 photographer',
+          '600+ edited images',
+          'Online gallery (2 years)',
+          'Print release',
+          'Engagement session included',
+        ],
+      },
+      {
+        name: 'Luxe',
+        price: '$4,500',
+        hours: 'Full Day',
+        features: [
+          '10+ hours of coverage',
+          '2 photographers',
+          '800+ edited images',
+          'Online gallery (lifetime)',
+          'Print release',
+          'Engagement session included',
+          'Custom USB drive',
+        ],
+      },
+    ],
+  },
+  {
+    category: 'Portraits & Lifestyle',
+    packages: [
+      {
+        name: 'Mini Session',
+        price: '$275',
+        hours: '30 Min',
+        features: [
+          '30-minute session',
+          '1 location',
+          '25+ edited images',
+          'Online gallery',
+          'Print release',
+        ],
+      },
+      {
+        name: 'Full Session',
+        price: '$475',
+        hours: '1 Hour',
+        featured: true,
+        features: [
+          '1-hour session',
+          'Up to 2 locations',
+          '60+ edited images',
+          'Online gallery',
+          'Print release',
+          'Outfit change included',
+        ],
+      },
+      {
+        name: 'Extended',
+        price: '$750',
+        hours: '2 Hours',
+        features: [
+          '2-hour session',
+          'Multiple locations',
+          '100+ edited images',
+          'Online gallery',
+          'Print release',
+          'Multiple outfit changes',
+          'Rush delivery available',
+        ],
+      },
+    ],
+  },
+];
+---
+
+<Layout title="Investment | Ashley Renee Photography" description="Photography investment and pricing for weddings, engagements, portraits, and lifestyle sessions.">
+
+  <!-- Page Hero -->
+  <section class="relative h-[45vh] min-h-[360px] flex items-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1600&q=80"
+        alt="Investment"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pb-14 text-white">
+      <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-white/70 mb-2">Pricing & Packages</p>
+      <h1 class="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-light">Investment</h1>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-16 px-6 bg-[#faf8f5] text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-4">What to Expect</p>
+      <h2 class="font-['Cormorant_Garamond'] text-4xl font-light text-[#2d2926] mb-6">
+        Photographs you'll pass down for generations
+      </h2>
+      <div class="w-12 h-px bg-[#c4a882] mx-auto mb-6"></div>
+      <p class="font-['Jost'] text-sm text-[#7a7470] leading-relaxed">
+        All packages include beautifully edited, high-resolution images delivered through a private online gallery. Every investment includes a full print release so you can print, share, and display your images anywhere, forever.
+      </p>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  {packages.map(section => (
+    <section class="pb-20 px-6 bg-[#faf8f5]">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] text-center mb-12">
+          {section.category}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {section.packages.map(pkg => (
+            <div class={`relative flex flex-col border p-8 ${pkg.featured ? 'border-[#c4a882] bg-white shadow-lg' : 'border-[#e8e4de] bg-white'}`}>
+              {pkg.featured && (
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#c4a882] text-white font-['Jost'] text-[10px] tracking-[0.2em] uppercase px-4 py-1">
+                  Most Popular
+                </div>
+              )}
+              <p class="font-['Jost'] text-[10px] tracking-[0.2em] uppercase text-[#c4a882] mb-1">{pkg.hours}</p>
+              <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#2d2926] mb-2">{pkg.name}</h3>
+              <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-6">{pkg.price}</p>
+              <div class="w-8 h-px bg-[#e8e4de] mb-6"></div>
+              <ul class="space-y-3 flex-1 mb-8">
+                {pkg.features.map(f => (
+                  <li class="flex items-start gap-3">
+                    <span class="text-[#c4a882] mt-0.5 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span class="font-['Jost'] text-sm text-[#7a7470]">{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact" class={`text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3.5 transition-all duration-300 ${pkg.featured ? 'bg-[#c4a882] text-white hover:bg-[#a08660]' : 'border border-[#2d2926] text-[#2d2926] hover:bg-[#2d2926] hover:text-white'}`}>
+                Book Now
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- FAQ Teaser -->
+  <section class="py-16 px-6 bg-[#f5f1eb] text-center">
+    <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-3">Have Questions?</p>
+    <h2 class="font-['Cormorant_Garamond'] text-4xl font-light text-[#2d2926] mb-4">Let's Chat</h2>
+    <p class="font-['Jost'] text-sm text-[#7a7470] mb-8 max-w-md mx-auto">
+      Every session is a little different. Reach out and let's find the perfect package for your vision and budget.
+    </p>
+    <a href="/contact" class="inline-block bg-[#2d2926] text-white font-['Jost'] text-xs tracking-[0.2em] uppercase px-10 py-4 hover:bg-[#c4a882] transition-all duration-300">
+      Get in Touch
+    </a>
+  </section>
+
+</Layout>
