@@ -3,14 +3,13 @@ import Layout from '../../layouts/Layout.astro';
 import GalleryPage from '../../components/GalleryPage.astro';
 
 const images = [
-  { src: 'https://images.unsplash.com/photo-1627556704302-624286467c65?w=800&q=80', alt: 'Graduation portrait' },
-  { src: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80', alt: 'Graduate outdoors' },
-  { src: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80', alt: 'Cap and gown' },
-  { src: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=800&q=80', alt: 'Graduation celebration' },
-  { src: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=800&q=80', alt: 'Graduate smiling' },
-  { src: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80', alt: 'Diploma moment' },
-  { src: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=800&q=80', alt: 'Graduate in nature' },
-  { src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80', alt: 'Graduation portrait close-up' },
+  { src: '/images/graduation/469930142_18040703321192102_4301264534118079220_n.jpg', alt: 'Graduation' },
+  { src: '/images/graduation/469961676_18040704251192102_1640981002278873645_n.jpg', alt: 'Graduation' },
+  { src: '/images/graduation/486422654_18051434111192102_7004594492906745869_n.jpg', alt: 'Graduation' },
+  { src: '/images/graduation/487523014_18051534053192102_1089375369083583276_n.jpg', alt: 'Graduation' },
+  { src: '/images/graduation/488534172_18052253276192102_7044977378075307248_n.jpg', alt: 'Graduation' },
+  { src: '/images/graduation/495057096_18054153488192102_5865196515237964776_n.jpg', alt: 'Graduation' },
+  { src: '/images/graduation/639767580_18083175368192102_310755632030046652_n.jpg', alt: 'Graduation' },
 ];
 ---
 
@@ -18,7 +17,7 @@ const images = [
   <GalleryPage
     title="Graduation"
     subtitle="Celebrate the Achievement"
-    heroImage="https://images.unsplash.com/photo-1627556704302-624286467c65?w=1600&q=80"
+    heroImage="/images/graduation/469930142_18040703321192102_4301264534118079220_n.jpg"
     description="You worked hard for this. Let's make sure these photos reflect exactly how proud you should feel — cap, gown, and all the joy that comes with it."
     images={images}
   />

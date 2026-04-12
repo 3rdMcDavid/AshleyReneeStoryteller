@@ -5,37 +5,31 @@ const categories = [
   {
     title: 'Weddings',
     href: '/portfolio/weddings',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80',
+    image: '/images/weddings/465971815_18037549133192102_5637463159628064396_n.jpg',
     description: 'Timeless wedding stories told with heart.',
   },
   {
     title: 'Engagements',
     href: '/portfolio/engagements',
-    image: 'https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&q=80',
+    image: '/images/engagement/139539768_226766872373739_100681518762178239_n.jpg',
     description: 'Celebrate your love before the big day.',
-  },
-  {
-    title: 'Senior Portraits',
-    href: '/portfolio/senior-portraits',
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80',
-    description: 'Marking the milestone with confidence.',
   },
   {
     title: 'Family',
     href: '/portfolio/family',
-    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80',
+    image: '/images/family/114741042_145740437143050_6758810298093628763_n.jpg',
     description: 'Real moments, real connections.',
   },
   {
     title: 'Lifestyle',
     href: '/portfolio/lifestyle',
-    image: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80',
+    image: '/images/lifestyle/103389046_129975188719575_8777935371690369010_n.jpg',
     description: 'Authentic stories in natural light.',
   },
   {
     title: 'Graduation',
     href: '/portfolio/graduation',
-    image: 'https://images.unsplash.com/photo-1627556704302-624286467c65?w=800&q=80',
+    image: '/images/graduation/469930142_18040703321192102_4301264534118079220_n.jpg',
     description: 'Celebrate the hard work and the big achievement.',
   },
 ];
@@ -45,19 +39,19 @@ const testimonials = [
     name: 'Emily & James',
     role: 'Wedding Clients',
     quote: 'Ashley captured every little detail of our wedding day perfectly. Looking at the photos brings us right back to that magical day. We couldn\'t have asked for a better photographer.',
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80',
+    initials: 'EJ',
   },
   {
     name: 'Sarah M.',
-    role: 'Senior Portrait Client',
-    quote: 'I was so nervous in front of the camera, but Ashley made me feel completely at ease. My senior photos turned out absolutely beautiful — I will treasure them forever.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80',
+    role: 'Portrait Client',
+    quote: 'I was so nervous in front of the camera, but Ashley made me feel completely at ease. My photos turned out absolutely beautiful — I will treasure them forever.',
+    initials: 'SM',
   },
   {
     name: 'The Johnson Family',
     role: 'Family Session',
     quote: 'We have tried other photographers before but none compare to Ashley. She has a gift for capturing the real us — laughing, playing, just being a family.',
-    image: 'https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=200&q=80',
+    initials: 'JF',
   },
 ];
 ---
@@ -68,7 +62,7 @@ const testimonials = [
   <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0">
       <img
-        src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1800&q=85"
+        src="/images/weddings/662139444_1555531519912060_7933131753234710402_n.jpg"
         alt="Wedding photography hero"
         class="w-full h-full object-cover object-center"
       />
@@ -148,7 +142,7 @@ const testimonials = [
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       <div class="relative">
         <img
-          src="https://images.unsplash.com/photo-1554080353-a576cf803bda?w=800&q=80"
+          src="/images/lifestyle/469843244_18040707203192102_6649566582940736998_n.jpg"
           alt="Ashley Renee, photographer"
           class="w-full aspect-[3/4] object-cover"
         />
@@ -188,7 +182,9 @@ const testimonials = [
               "{t.quote}"
             </p>
             <div class="flex items-center gap-4 pt-4 border-t border-[#e8e4de]">
-              <img src={t.image} alt={t.name} class="w-10 h-10 rounded-full object-cover" />
+              <div class="w-10 h-10 rounded-full bg-[#c4a882] flex items-center justify-center flex-shrink-0">
+                <span class="font-['Jost'] text-xs text-white font-medium">{t.initials}</span>
+              </div>
               <div>
                 <p class="font-['Jost'] text-sm font-medium text-[#2d2926]">{t.name}</p>
                 <p class="font-['Jost'] text-xs text-[#c4a882] tracking-wide">{t.role}</p>
@@ -204,7 +200,7 @@ const testimonials = [
   <section class="relative py-32 px-6 overflow-hidden">
     <div class="absolute inset-0">
       <img
-        src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1600&q=80"
+        src="/images/weddings/494374547_1254889969976218_7876590322570279490_n.jpg"
         alt="CTA background"
         class="w-full h-full object-cover object-center"
       />

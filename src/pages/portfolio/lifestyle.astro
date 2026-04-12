@@ -3,13 +3,27 @@ import Layout from '../../layouts/Layout.astro';
 import GalleryPage from '../../components/GalleryPage.astro';
 
 const images = [
-  { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80', alt: 'Lifestyle session' },
-  { src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&q=80', alt: 'Lifestyle outdoors' },
-  { src: 'https://images.unsplash.com/photo-1524863479829-916d8e77f114?w=800&q=80', alt: 'Natural lifestyle' },
-  { src: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=80', alt: 'Lifestyle friends' },
-  { src: 'https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?w=800&q=80', alt: 'Everyday moment' },
-  { src: 'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=800&q=80', alt: 'Lifestyle portrait' },
-  { src: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80', alt: 'Casual lifestyle' },
+  { src: '/images/lifestyle/103389046_129975188719575_8777935371690369010_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/103587198_129975445386216_7384967232069229621_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/103805783_129975575386203_6548994347633750464_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/129316278_192985725751854_8692919906326346083_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/129512878_192988209084939_980907250264169157_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/469282318_1110810360636048_1631481528271422012_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/469461017_1110810283969389_5639230442344956523_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/469843244_18040707203192102_6649566582940736998_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/469987278_18040706999192102_3947110016309540811_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/470024828_18040702688192102_5199308752572906095_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/472305134_18044712026192102_49047894275737810_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/474103134_18044712029192102_6312275582914610197_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/474555025_18044978075192102_5157369896556433130_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/474736955_18044978084192102_8809325647424420263_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/488717594_1229196165878932_8313970312700534184_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/488833775_1230999922365223_1184346567011386143_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/489083567_1233592945439254_9192062064753163246_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/489289431_1230999859031896_5218426837422730211_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/489732747_1233592968772585_3115025873320110794_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/657784025_18086987804192102_6537280372045797406_n.jpg', alt: 'Lifestyle' },
+  { src: '/images/lifestyle/659049258_18087423071192102_4080870436100123561_n.jpg', alt: 'Lifestyle' },
 ];
 ---
 
@@ -17,7 +31,7 @@ const images = [
   <GalleryPage
     title="Lifestyle"
     subtitle="Everyday Beauty"
-    heroImage="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1600&q=80"
+    heroImage="/images/lifestyle/103389046_129975188719575_8777935371690369010_n.jpg"
     description="Some of the most beautiful moments are the quiet, ordinary ones. A lifestyle session celebrates who you are right now — no occasion needed."
     images={images}
   />

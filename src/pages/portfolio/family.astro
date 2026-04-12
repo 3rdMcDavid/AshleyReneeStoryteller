@@ -3,14 +3,16 @@ import Layout from '../../layouts/Layout.astro';
 import GalleryPage from '../../components/GalleryPage.astro';
 
 const images = [
-  { src: 'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80', alt: 'Family portrait' },
-  { src: 'https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=800&q=80', alt: 'Family outdoors' },
-  { src: 'https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=800&q=80', alt: 'Family laughing' },
-  { src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80', alt: 'Parents with children' },
-  { src: 'https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=800&q=80', alt: 'Family in nature' },
-  { src: 'https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=800&q=80', alt: 'Family candid' },
-  { src: 'https://images.unsplash.com/photo-1562765780-56cf0f95b85b?w=800&q=80', alt: 'Family moment' },
-  { src: 'https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&q=80', alt: 'Family in sunset' },
+  { src: '/images/family/114741042_145740437143050_6758810298093628763_n.jpg', alt: 'Family' },
+  { src: '/images/family/469930156_18040706870192102_6203531000035767388_n.jpg', alt: 'Family' },
+  { src: '/images/family/469991122_18040706882192102_7480551627336947319_n.jpg', alt: 'Family' },
+  { src: '/images/family/476511666_18046876553192102_5969360109962782845_n.jpg', alt: 'Family' },
+  { src: '/images/family/476755817_18046876544192102_151119682013236895_n.jpg', alt: 'Family' },
+  { src: '/images/family/476889152_18046876526192102_4843740009865742826_n.jpg', alt: 'Family' },
+  { src: '/images/family/476945150_18046876496192102_553204145468599210_n.jpg', alt: 'Family' },
+  { src: '/images/family/476951161_18046876562192102_2277444758736616311_n.jpg', alt: 'Family' },
+  { src: '/images/family/497757489_18055832198192102_5332223184532350109_n.jpg', alt: 'Family' },
+  { src: '/images/family/574339506_18072779426192102_3242390315820091007_n.jpg', alt: 'Family' },
 ];
 ---
 
@@ -18,7 +20,7 @@ const images = [
   <GalleryPage
     title="Family"
     subtitle="Real Moments"
-    heroImage="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=1600&q=80"
+    heroImage="/images/family/114741042_145740437143050_6758810298093628763_n.jpg"
     description="Family photos aren't about perfection — they're about connection. I'll give you the prompts, you bring the people, and together we'll make something you'll hang on your wall for years."
     images={images}
   />
