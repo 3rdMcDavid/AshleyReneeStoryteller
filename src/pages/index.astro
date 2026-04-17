@@ -26,6 +26,12 @@ const categories = [
     image: '/images/newborn/DSC09107.jpg',
     description: 'Tender first moments captured right at home.',
   },
+  {
+    title: 'Maternity',
+    href: '/portfolio/maternity',
+    image: '/images/maternity/DSC02289.jpg',
+    description: 'Soft, intimate sessions celebrating this season.',
+  },
 ];
 
 const testimonials = [
@@ -110,7 +116,7 @@ const testimonials = [
         {categories.map((cat, i) => (
           <a
             href={cat.href}
-            class={`group relative overflow-hidden ${i === 0 ? 'md:col-span-2 lg:col-span-1' : ''} aspect-[4/5]`}
+            class={`group relative overflow-hidden ${i === 0 ? 'md:col-span-2 lg:col-span-1' : ''} ${i === 4 ? 'md:col-span-2 lg:col-span-2 aspect-[3/2]' : 'aspect-[4/5]'}`}
           >
             <img
               src={cat.image}

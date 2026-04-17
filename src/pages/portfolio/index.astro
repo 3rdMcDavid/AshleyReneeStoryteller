@@ -30,6 +30,13 @@ const categories = [
     count: 'New arrivals',
     description: 'Tender first moments captured right where they happen — at home.',
   },
+  {
+    title: 'Maternity',
+    href: '/portfolio/maternity',
+    image: '/images/maternity/DSC02289.jpg',
+    count: 'Expecting',
+    description: 'Soft, intimate sessions celebrating this season exactly as it is.',
+  },
 ];
 ---
 
@@ -58,7 +65,7 @@ const categories = [
         {categories.map((cat, i) => (
           <a
             href={cat.href}
-            class={`group relative overflow-hidden ${i === 4 ? 'md:col-span-2' : ''} aspect-[16/9]`}
+            class={`group relative overflow-hidden ${i === 4 ? 'md:col-span-2 aspect-[16/7]' : 'aspect-[4/3]'}`}
           >
             <img
               src={cat.image}

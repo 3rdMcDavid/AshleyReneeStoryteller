@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GalleryPage from '../../components/GalleryPage.astro';
+
+const images = [
+  { src: '/images/maternity/DSC00518.jpg', alt: 'Maternity' },
+  { src: '/images/maternity/DSC00522.jpg', alt: 'Maternity' },
+  { src: '/images/maternity/DSC00540.jpg', alt: 'Maternity' },
+  { src: '/images/maternity/DSC00547.jpg', alt: 'Maternity' },
+  { src: '/images/maternity/DSC00664.jpg', alt: 'Maternity' },
+  { src: '/images/maternity/DSC02289.jpg', alt: 'Maternity' },
+  { src: '/images/maternity/DSC02405.jpg', alt: 'Maternity' },
+];
+---
+
+<Layout title="Maternity | Ashley Renee Photography">
+  <GalleryPage
+    title="Maternity"
+    subtitle="Expecting"
+    heroImage="/images/maternity/DSC02289.jpg"
+    description="This season deserves to be remembered. Soft, intimate maternity sessions that celebrate you exactly as you are right now."
+    images={images}
+  />
+</Layout>
