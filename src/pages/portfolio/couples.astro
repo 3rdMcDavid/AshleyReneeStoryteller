@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GalleryPage from '../../components/GalleryPage.astro';
+
+const images = [
+  { src: '/images/couples/DSC01149.jpg', alt: 'Couples' },
+  { src: '/images/couples/DSC01550.jpg', alt: 'Couples' },
+  { src: '/images/couples/DSC01621.jpg', alt: 'Couples' },
+  { src: '/images/couples/DSC08835-3.jpg', alt: 'Couples' },
+  { src: '/images/couples/DSC09358.jpg', alt: 'Couples' },
+];
+---
+
+<Layout title="Couples | Ashley Renee Photography">
+  <GalleryPage
+    title="Couples"
+    subtitle="Connection Sessions"
+    heroImage="/images/couples/DSC09358.jpg"
+    description="Whether you're newly engaged or celebrating years together, couples sessions are all about the two of you — relaxed, real, and full of feeling."
+    images={images}
+  />
+</Layout>

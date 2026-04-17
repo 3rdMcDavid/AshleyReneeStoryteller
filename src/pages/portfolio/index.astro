@@ -37,6 +37,13 @@ const categories = [
     count: 'Expecting',
     description: 'Soft, intimate sessions celebrating this season exactly as it is.',
   },
+  {
+    title: 'Couples',
+    href: '/portfolio/couples',
+    image: '/images/couples/DSC09358.jpg',
+    count: 'Connection sessions',
+    description: 'Relaxed, real moments between two people who chose each other.',
+  },
 ];
 ---
 
@@ -65,7 +72,7 @@ const categories = [
         {categories.map((cat, i) => (
           <a
             href={cat.href}
-            class={`group relative overflow-hidden ${i === 4 ? 'md:col-span-2 aspect-[16/7]' : 'aspect-[4/3]'}`}
+            class="group relative overflow-hidden aspect-[4/3]"
           >
             <img
               src={cat.image}
