@@ -1,101 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const packages = [
-  {
-    category: 'Weddings',
-    packages: [
-      {
-        name: 'Essential',
-        price: '$2,400',
-        hours: '6 Hours',
-        features: [
-          '6 hours of coverage',
-          '1 photographer',
-          '400+ edited images',
-          'Online gallery (1 year)',
-          'Print release',
-        ],
-      },
-      {
-        name: 'Classic',
-        price: '$3,200',
-        hours: '8 Hours',
-        featured: true,
-        features: [
-          '8 hours of coverage',
-          '1 photographer',
-          '600+ edited images',
-          'Online gallery (2 years)',
-          'Print release',
-          'Engagement session included',
-        ],
-      },
-      {
-        name: 'Luxe',
-        price: '$4,500',
-        hours: 'Full Day',
-        features: [
-          '10+ hours of coverage',
-          '2 photographers',
-          '800+ edited images',
-          'Online gallery (lifetime)',
-          'Print release',
-          'Engagement session included',
-          'Custom USB drive',
-        ],
-      },
-    ],
-  },
-  {
-    category: 'Portraits & Lifestyle',
-    packages: [
-      {
-        name: 'Mini Session',
-        price: '$275',
-        hours: '30 Min',
-        features: [
-          '30-minute session',
-          '1 location',
-          '25+ edited images',
-          'Online gallery',
-          'Print release',
-        ],
-      },
-      {
-        name: 'Full Session',
-        price: '$475',
-        hours: '1 Hour',
-        featured: true,
-        features: [
-          '1-hour session',
-          'Up to 2 locations',
-          '60+ edited images',
-          'Online gallery',
-          'Print release',
-          'Outfit change included',
-        ],
-      },
-      {
-        name: 'Extended',
-        price: '$750',
-        hours: '2 Hours',
-        features: [
-          '2-hour session',
-          'Multiple locations',
-          '100+ edited images',
-          'Online gallery',
-          'Print release',
-          'Multiple outfit changes',
-          'Rush delivery available',
-        ],
-      },
-    ],
-  },
-];
 ---
 
-<Layout title="Investment | Ashley Renee Photography" description="Photography investment and pricing for weddings, engagements, portraits, and lifestyle sessions.">
+<Layout title="Investment | Ashley Renee Photography" description="Photography investment and pricing for weddings, elopements, couples, maternity, newborn, and grad sessions.">
 
   <!-- Page Hero -->
   <section class="relative h-[45vh] min-h-[360px] flex items-end overflow-hidden">
@@ -127,47 +34,166 @@ const packages = [
     </div>
   </section>
 
-  <!-- Packages -->
-  {packages.map(section => (
-    <section class="pb-20 px-6 bg-[#faf8f5]">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] text-center mb-12">
-          {section.category}
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {section.packages.map(pkg => (
-            <div class={`relative flex flex-col border p-8 ${pkg.featured ? 'border-[#c4a882] bg-white shadow-lg' : 'border-[#e8e4de] bg-white'}`}>
-              {pkg.featured && (
-                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#c4a882] text-white font-['Jost'] text-[10px] tracking-[0.2em] uppercase px-4 py-1">
-                  Most Popular
-                </div>
-              )}
-              <p class="font-['Jost'] text-[10px] tracking-[0.2em] uppercase text-[#c4a882] mb-1">{pkg.hours}</p>
-              <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#2d2926] mb-2">{pkg.name}</h3>
-              <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-6">{pkg.price}</p>
-              <div class="w-8 h-px bg-[#e8e4de] mb-6"></div>
-              <ul class="space-y-3 flex-1 mb-8">
-                {pkg.features.map(f => (
-                  <li class="flex items-start gap-3">
-                    <span class="text-[#c4a882] mt-0.5 flex-shrink-0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    </span>
-                    <span class="font-['Jost'] text-sm text-[#7a7470]">{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href="/contact" class={`text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3.5 transition-all duration-300 ${pkg.featured ? 'bg-[#c4a882] text-white hover:bg-[#a08660]' : 'border border-[#2d2926] text-[#2d2926] hover:bg-[#2d2926] hover:text-white'}`}>
-                Book Now
-              </a>
+  <!-- Weddings -->
+  <section class="pb-20 px-6 bg-[#faf8f5]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] text-center mb-12">Weddings</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+        <!-- Elopements -->
+        <div class="bg-white border border-[#e8e4de] p-10 flex flex-col">
+          <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-2">Intimate & Adventurous</p>
+          <h3 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] mb-3">Elopements</h3>
+          <div class="w-8 h-px bg-[#e8e4de] mb-5"></div>
+          <p class="font-['Cormorant_Garamond'] text-5xl text-[#2d2926] mb-1">$400</p>
+          <p class="font-['Jost'] text-xs text-[#c4a882] tracking-widest uppercase mb-8">Starting at</p>
+          <a href="/contact" class="mt-auto text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3.5 border border-[#2d2926] text-[#2d2926] hover:bg-[#2d2926] hover:text-white transition-all duration-300">
+            Inquire
+          </a>
+        </div>
+
+        <!-- Weddings -->
+        <div class="bg-white border border-[#c4a882] p-10 flex flex-col shadow-lg relative">
+          <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-2">4, 6, or 8 Hours</p>
+          <h3 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] mb-3">Weddings</h3>
+          <div class="w-8 h-px bg-[#e8e4de] mb-5"></div>
+          <p class="font-['Cormorant_Garamond'] text-5xl text-[#2d2926] mb-1">$600</p>
+          <p class="font-['Jost'] text-xs text-[#c4a882] tracking-widest uppercase mb-8">Starting at</p>
+          <a href="/contact" class="mt-auto text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3.5 bg-[#c4a882] text-white hover:bg-[#a08660] transition-all duration-300">
+            Inquire
+          </a>
+        </div>
+
+      </div>
+
+      <!-- All Wedding Packages Include -->
+      <div class="bg-white border border-[#e8e4de] p-10">
+        <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-4 text-center">All Wedding Packages Include</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            'Engagement session',
+            'Bridal session',
+            '1 photographer',
+            '500+ images',
+            'High-resolution download',
+            'Full print release',
+          ].map(item => (
+            <div class="flex items-start gap-3">
+              <span class="text-[#c4a882] mt-0.5 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span class="font-['Jost'] text-sm text-[#7a7470]">{item}</span>
             </div>
           ))}
         </div>
       </div>
-    </section>
-  ))}
 
-  <!-- FAQ Teaser -->
-  <section class="py-16 px-6 bg-[#f5f1eb] text-center">
+    </div>
+  </section>
+
+  <!-- Portraits & Lifestyle -->
+  <section class="pb-20 px-6 bg-[#faf8f5]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] text-center mb-12">Portraits & Lifestyle</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+        <!-- Couples -->
+        <div class="bg-white border border-[#e8e4de] p-8 flex flex-col">
+          <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-2">45 min – 1 hr</p>
+          <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#2d2926] mb-3">Couples</h3>
+          <div class="w-6 h-px bg-[#e8e4de] mb-4"></div>
+          <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-1">$275</p>
+          <p class="font-['Jost'] text-[10px] text-[#c4a882] tracking-widest uppercase mb-5">Per session</p>
+          <p class="font-['Jost'] text-xs text-[#7a7470] mb-8 flex-1">25+ edited images</p>
+          <a href="/contact" class="text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3 border border-[#2d2926] text-[#2d2926] hover:bg-[#2d2926] hover:text-white transition-all duration-300">
+            Book
+          </a>
+        </div>
+
+        <!-- Maternity -->
+        <div class="bg-white border border-[#e8e4de] p-8 flex flex-col">
+          <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-2">1 Hour</p>
+          <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#2d2926] mb-3">Maternity</h3>
+          <div class="w-6 h-px bg-[#e8e4de] mb-4"></div>
+          <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-1">$300</p>
+          <p class="font-['Jost'] text-[10px] text-[#c4a882] tracking-widest uppercase mb-5">Per session</p>
+          <p class="font-['Jost'] text-xs text-[#7a7470] mb-8 flex-1">25+ edited images</p>
+          <a href="/contact" class="text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3 border border-[#2d2926] text-[#2d2926] hover:bg-[#2d2926] hover:text-white transition-all duration-300">
+            Book
+          </a>
+        </div>
+
+        <!-- In-Home Newborn -->
+        <div class="bg-white border border-[#e8e4de] p-8 flex flex-col">
+          <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-2">2 Hours</p>
+          <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#2d2926] mb-3">In-Home Newborn</h3>
+          <div class="w-6 h-px bg-[#e8e4de] mb-4"></div>
+          <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-1">$400</p>
+          <p class="font-['Jost'] text-[10px] text-[#c4a882] tracking-widest uppercase mb-5">Per session</p>
+          <p class="font-['Jost'] text-xs text-[#7a7470] mb-8 flex-1">25+ edited images</p>
+          <a href="/contact" class="text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3 border border-[#2d2926] text-[#2d2926] hover:bg-[#2d2926] hover:text-white transition-all duration-300">
+            Book
+          </a>
+        </div>
+
+        <!-- Grads -->
+        <div class="bg-white border border-[#e8e4de] p-8 flex flex-col">
+          <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-2">Milestone</p>
+          <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#2d2926] mb-3">Grads</h3>
+          <div class="w-6 h-px bg-[#e8e4de] mb-4"></div>
+          <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-1">$200</p>
+          <p class="font-['Jost'] text-[10px] text-[#c4a882] tracking-widest uppercase mb-5">Starting at</p>
+          <p class="font-['Jost'] text-xs text-[#7a7470] mb-8 flex-1">Custom packages available</p>
+          <a href="/contact" class="text-center font-['Jost'] text-xs tracking-[0.2em] uppercase py-3 border border-[#2d2926] text-[#2d2926] hover:bg-[#2d2926] hover:text-white transition-all duration-300">
+            Book
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Add-Ons -->
+  <section class="pb-20 px-6 bg-[#f5f1eb]">
+    <div class="max-w-5xl mx-auto pt-16">
+      <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-4 text-center">Enhance Your Experience</p>
+      <h2 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#2d2926] text-center mb-2">Add-Ons</h2>
+      <div class="w-12 h-px bg-[#c4a882] mx-auto mb-12"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Content Creation -->
+        <div class="bg-white border border-[#e8e4de] p-8">
+          <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-1">$200</p>
+          <div class="w-6 h-px bg-[#e8e4de] my-4"></div>
+          <h3 class="font-['Cormorant_Garamond'] text-xl font-light text-[#2d2926] mb-3">Content Creation</h3>
+          <p class="font-['Jost'] text-xs text-[#7a7470] leading-relaxed">Behind-the-scenes content for social media, delivered alongside your gallery.</p>
+        </div>
+
+        <!-- Ceremony Video -->
+        <div class="bg-white border border-[#e8e4de] p-8">
+          <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-1">$200</p>
+          <div class="w-6 h-px bg-[#e8e4de] my-4"></div>
+          <h3 class="font-['Cormorant_Garamond'] text-xl font-light text-[#2d2926] mb-3">Ceremony Video</h3>
+          <p class="font-['Jost'] text-xs text-[#7a7470] leading-relaxed">Raw, unedited ceremony footage — a beautiful keepsake of your vows exactly as they happened.</p>
+        </div>
+
+        <!-- Wedding Website -->
+        <div class="bg-white border border-[#e8e4de] p-8">
+          <p class="font-['Cormorant_Garamond'] text-4xl text-[#2d2926] mb-1">$200</p>
+          <div class="w-6 h-px bg-[#e8e4de] my-4"></div>
+          <h3 class="font-['Cormorant_Garamond'] text-xl font-light text-[#2d2926] mb-3">Wedding Website</h3>
+          <p class="font-['Jost'] text-xs text-[#7a7470] leading-relaxed">A custom site for your guests — QR code photo uploads, planning portal, and info on accommodations, food, and itineraries.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-6 bg-[#faf8f5] text-center">
     <p class="font-['Jost'] text-[10px] tracking-[0.3em] uppercase text-[#c4a882] mb-3">Have Questions?</p>
     <h2 class="font-['Cormorant_Garamond'] text-4xl font-light text-[#2d2926] mb-4">Let's Chat</h2>
     <p class="font-['Jost'] text-sm text-[#7a7470] mb-8 max-w-md mx-auto">
